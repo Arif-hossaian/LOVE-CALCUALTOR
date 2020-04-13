@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+   
+    <header>
+        <div class="card w-50 mt-50 m-auto text-center header-one">
+            <div class="card-header bg-danger text-white">LOVE CALCULATOR</div>
+            <div class="card-body">
+                <form action="" class=" w-75 m-auto">
+                    <div class="form-group">
+                        <input type="text" class="form-control text-center" placeholder="Your Name" id="myname" >
+                    </div>
+
+                    <div><span class="pl-4 pr-4 operator">+</span></div>
+
+                    <form action="" class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control text-center" placeholder="Love Name" id="lovename">
+                        </div>
+                    </form>
+                </form>
+                
+                <br>
+                <div class="lol">
+                    <button class="btn btn-success w-50 " onclick="cheacklove()">Click</button>
+                </div>
+                <br>
+                <div>
+                    <input type="text" id="lovevalue" class="form-control text-center w-70 m-auto" placeholder=" Love Percentage">
+                </div>
+                
+
+            </div>
+            <div class="card-footer">God Bless Yours Relationship</div>
+          </div>
+    </header>
+
+    <script>
+        function cheacklove(){
+            var firstname = document.getElementById("myname").value;
+            var secname = document.getElementById("lovename").value;
+
+            if(firstname == ""){
+                alert("Please Enter Your Name First")
+            }
+            else if(firstname.length <= 2){
+                alert("Please Enter at Least 3 words")
+            }
+            else if(!isNaN(firstname))
+            {
+                alert("only Character You can input :)")
+            }
+
+        //love name condition//
+
+         else if(secname == ""){
+                alert("Please Enter Your Name Love Name First")
+            }
+            else if(secname.length <= 2){
+                alert("Please Enter at Least 3 words")
+            }
+            else if(!isNaN(secname))
+            {
+                alert("only Character You can input :)")
+            }
+
+            else
+            {
+             var lovedate = Math.random()*100;
+            lovedate = Math.floor(lovedate);
+            document.getElementById("lovevalue").value=lovedate +"%";
+            }
+        }
+    </script>
+</body>
+</html>

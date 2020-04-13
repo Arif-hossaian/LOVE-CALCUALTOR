@@ -1,0 +1,22 @@
+body{
+    background-image: url(images/i\ love\ uuuuuu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+header{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media(max-width: 640px){
+    .header-one{
+        width: 20% !important;
+    }
+}
+
